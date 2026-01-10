@@ -86,3 +86,6 @@ StyleCopReport.xml
 node_modules/
 *.dll
 *.exe
+
+email.txt
+mensagem.txt
