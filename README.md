@@ -4,7 +4,9 @@ API RESTful desenvolvida em .NET Core para gerenciamento de catálogo de livros,
 
 ## 📋 Sobre o Projeto
 
-Este projeto é a solução de um teste desenvolvido como parte do processo seletivo para Desenvolvedor C#. A API permite:
+Este projeto é a solução da [prova conceito do time IAGRO](https://github.com/timeiagro/BackendProvaConceitoTimeIAGRO)   
+
+A API permite:
 
 - ✅ Buscar livros em um catálogo JSON
 - ✅ Filtrar livros por especificações (autor, nome, gênero, etc.)
@@ -23,15 +25,15 @@ BackendProvaConceitoTimeIAGRO_PedroHenriqueJanini/
 └── books.json             # Base de dados (arquivo JSON)
 ```
 
+### Hamurabi.Api (Camada de API)
+- **Controllers**: Endpoints REST
+- **Program.cs**: Configuração da aplicação
+  
 ### Hamurabi.Core (Núcleo da Aplicação)
 - **Models**: Classes que representam as entidades (Book, BookSpecifications)
 - **Interfaces**: Contratos para Repository e Service
 - **Services**: Lógica de negócio (busca, ordenação)
 - **Repositories**: Acesso aos dados (leitura do JSON)
-
-### Hamurabi.Api (Camada de API)
-- **Controllers**: Endpoints REST
-- **Program.cs**: Configuração da aplicação
 
 ### Hamurabi.Tests
 - Testes unitários utilizando xUnit
@@ -148,17 +150,3 @@ curl -X GET "http://localhost:5161/api/books/1/shipping"
 - **Dependency Injection**: Inversão de dependência e baixo acoplamento
 - **Service Layer**: Separação da lógica de negócio
 - **SOLID Principles**: Código organizado e manutenível
-
-## 👤 Autor
-
-**Pedro Henrique Janini**
-
-Desenvolvido como prova de conceito para processo seletivo do time IAGRO.
-
-## 📄 Licença
-
-Este projeto foi desenvolvido para fins educacionais e de avaliação técnica.
-
----
-
-**Nota**: Este README será atualizado conforme o desenvolvimento do projeto avança.
