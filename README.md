@@ -78,15 +78,13 @@ cd Hamurabi.Api
 dotnet run
 ```
 
-A API estará disponível em:
-- **HTTPS**: `https://localhost:5001`
-- **HTTP**: `http://localhost:5000`
+A API estará disponível. Verifique no terminal a URL exibida (geralmente `http://localhost:5xxx`).
 
 ### 5. Acesse a documentação Swagger
 
-Abra o navegador e acesse:
+Abra o navegador e acesse a URL `/swagger` mostrada no terminal, por exemplo:
 ```
-https://localhost:5001/swagger
+http://localhost:5161/swagger
 ```
 
 ## 🧪 Como Executar os Testes
