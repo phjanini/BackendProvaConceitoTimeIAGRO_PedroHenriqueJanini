@@ -103,14 +103,44 @@ dotnet test --logger "console;verbosity=detailed"
 
 ## 📚 Endpoints da API
 
-(Em desenvolvimento - será atualizado conforme implementação dos Controllers)
+| Método | Endpoint | Descrição | Exemplo |
+|--------|----------|-----------|---------|
+| GET | `/api/books` | Retorna todos os livros | `GET /api/books` |
+| GET | `/api/books/search?term={termo}` | Busca livros por termo (nome, autor, gênero, etc) | `GET /api/books/search?term=Jules` |
+| GET | `/api/books/ordered?ascending={true/false}` | Retorna livros ordenados por preço | `GET /api/books/ordered?ascending=false` |
+| GET | `/api/books/{id}/shipping` | Calcula frete de um livro específico | `GET /api/books/1/shipping` |
 
-| Método | Endpoint | Descrição |
-|--------|----------|-----------|
-| GET | `/api/books` | Retorna todos os livros |
-| GET | `/api/books/search?term={termo}` | Busca livros por termo |
-| GET | `/api/books/ordered?ascending={true/false}` | Retorna livros ordenados por preço |
-| GET | `/api/books/{id}/shipping` | Calcula frete de um livro |
+### Exemplos de Uso
+
+**1. Buscar todos os livros:**
+```bash
+curl -X GET "http://localhost:5161/api/books"
+```
+
+**2. Buscar livros por autor (Jules Verne):**
+```bash
+curl -X GET "http://localhost:5161/api/books/search?term=Jules"
+```
+
+**3. Ordenar livros por preço (descendente):**
+```bash
+curl -X GET "http://localhost:5161/api/books/ordered?ascending=false"
+```
+
+**4. Calcular frete do livro ID 1:**
+```bash
+curl -X GET "http://localhost:5161/api/books/1/shipping"
+```
+**Resposta:**
+```json
+{
+  "bookId": 1,
+  "bookName": "Journey to the Center of the Earth",
+  "price": 10.00,
+  "shipping": 2.00,
+  "totalPrice": 12.00
+}
+```
 
 ## 🎯 Padrões de Projeto Utilizados
 
