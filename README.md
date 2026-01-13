@@ -50,7 +50,6 @@ BackendProvaConceitoTimeIAGRO_PedroHenriqueJanini/
 Para executar este projeto, você precisa ter instalado:
 
 - [.NET SDK 6.0 ou superior](https://dotnet.microsoft.com/download)
-- Visual Studio Code ou Visual Studio 2022
 
 ## 🚀 Como Executar o Projeto
 
@@ -80,20 +79,22 @@ cd Hamurabi.Api
 dotnet run
 ```
 
-A API estará disponível. Verifique no terminal a URL exibida (geralmente `http://localhost:5xxx`).
+A API estará disponível. Verifique no terminal a URL exibida (geralmente `http://localhost:5161/`).
 
 ### 5. Acesse a documentação Swagger
 
-Abra o navegador e acesse a URL `/swagger` mostrada no terminal, por exemplo:
+Abra o navegador e acesse a URL `/index.html` junto do localhost exibido no terminal, por exemplo:
 ```
-http://localhost:5161/swagger
+http://localhost:5161/index.html
 ```
 
 ## 🧪 Como Executar os Testes
 
-Para executar todos os testes unitários:
+Para executar todos os testes unitários, retorne para a raíz do projeto e entre na camada de testes:
 
 ```bash
+cd ..
+cd Hamurabi.Tests
 dotnet test
 ```
 
@@ -149,4 +150,5 @@ curl -X GET "http://localhost:5161/api/books/1/shipping"
 - **Repository Pattern**: Abstração da camada de acesso a dados
 - **Dependency Injection**: Inversão de dependência e baixo acoplamento
 - **Service Layer**: Separação da lógica de negócio
+
 - **SOLID Principles**: Código organizado e manutenível
